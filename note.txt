@@ -1,2 +1,7 @@
 ng new <project-name>
- 
+ng serve
+
+
+
+
+npm install bootstrap@5 
