@@ -1,6 +1,6 @@
 ng new <project-name>
 ng serve
-
+ng generate module <module-name>     
 
 
 
