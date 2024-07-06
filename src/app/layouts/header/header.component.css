@@ -1,0 +1,5 @@
+.header {
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+}
