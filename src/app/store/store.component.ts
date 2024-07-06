@@ -9,5 +9,7 @@ import { ListProductComponent } from './list-product/list-product.component';
   styleUrl: './store.component.css'
 })
 export class StoreComponent {
+  
+  constructor() {}
 
 }
