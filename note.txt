@@ -1,9 +1,8 @@
 ng new <project-name>
 ng serve
 ng generate module <module-name>     
-
 ng generate component layouts/header   
-
+ng generate service store/list-product
 
 npm install bootstrap@5 
 
