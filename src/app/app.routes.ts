@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { OtherComponent } from './other/other.component';
 import { CategoryComponent } from './category/category.component';
 import { Children1Component } from './other/children-1/children-1.component';
+import { StoreComponent } from './store/store.component';
 
 export const routes: Routes = [
 
@@ -19,4 +20,5 @@ export const routes: Routes = [
         }]
     },
     { path: 'category/:name',component: CategoryComponent },
+    { path: 'store', component: StoreComponent }
 ];

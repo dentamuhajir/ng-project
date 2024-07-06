@@ -6,3 +6,5 @@ ng generate component layouts/header
 
 
 npm install bootstrap@5 
+
+https://fakeapi.platzi.com/en/rest/products/#pagination
