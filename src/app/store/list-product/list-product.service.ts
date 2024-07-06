@@ -12,7 +12,7 @@ export class ListProductService implements OnInit {
 
   getDummyProductList() {
     this.productList = [{
-      name : "iPhone 16",
+      name : "iPhone 15 Pro Max",
       description : "A new smartphone",
       price : "$1000"
     },
@@ -20,6 +20,16 @@ export class ListProductService implements OnInit {
       name : "Fender Telecaster",
       description : "A new electric guitar",
       price : "$1500"
+    },
+    {
+      name : "RX King",
+      description : "A new motorcycle ",
+      price : "$1200"
+    },
+    {
+      name : "Ketoprak",
+      description : "A food",
+      price : "$2"
     }];
     let listProduct = this.productList 
     return  listProduct

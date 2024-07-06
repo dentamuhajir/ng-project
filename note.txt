@@ -4,6 +4,11 @@ ng generate module <module-name>
 ng generate component layouts/header   
 ng generate service store/list-product
 
+Directive
+https://v17.angular.io/guide/built-in-directives#ngFor
+import CommonModule
+
+
 npm install bootstrap@5 
 
 https://fakeapi.platzi.com/en/rest/products/#pagination
