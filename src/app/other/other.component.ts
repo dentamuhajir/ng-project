@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-other',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './other.component.css'
 })
 export class OtherComponent {
+  constructor(private titleService: Title) {
+    titleService.setTitle("Other Page")
+  }
 
 }
