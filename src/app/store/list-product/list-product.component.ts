@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListProductService } from './list-product.service';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule, NgFor, NgForOf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-list-product',
@@ -18,7 +17,9 @@ export class ListProductComponent implements OnInit {
   
   ngOnInit(): void {
     this.listProduct = this.listProductService.getDummyProductList();
-    this.listProductNew = this.listProductService.getProductList();  
+    this.listProductService.getProductList().subscribe(response => {
+      this.listProductNew = response
+    });  
     console.log(this.listProductNew)
   }
 }
