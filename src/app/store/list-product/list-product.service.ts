@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ListProductService implements OnInit {
   productList: Array<any> = []
-  endpointURL: string = "https://api.escuelajs.co/api/v1/products?offset=0&limit=8"
+  endpointURL: string = "https://api.escuelajs.co/api/v1/products?offset=0&limit=4"
   constructor(private http: HttpClient) { }
   ngOnInit(): void {
     this.getDummyProductList()
