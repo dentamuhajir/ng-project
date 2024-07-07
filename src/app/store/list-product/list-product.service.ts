@@ -1,13 +1,21 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListProductService implements OnInit {
   productList: Array<any> = []
-  constructor() { }
+  endpointURL: string = "https://api.escuelajs.co/api/v1/products?offset=0&limit=8"
+  constructor(private http: HttpClient) { }
   ngOnInit(): void {
-    this.getDummyProductList();
+    this.getDummyProductList()
+    this.getProductList()
+  }
+
+  getProductList(): Observable<any> {
+    return this.http.get<any>(`${this.endpointURL}`)
   }
 
   getDummyProductList() {

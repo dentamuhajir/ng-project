@@ -12,11 +12,13 @@ import { CommonModule, NgFor, NgForOf } from '@angular/common';
 })
 export class ListProductComponent implements OnInit {
   listProduct: any[] = []
+  listProductNew: any 
 
   constructor(private listProductService: ListProductService) {}
   
   ngOnInit(): void {
-    this.listProduct = this.listProductService.getDummyProductList();  
-    console.log(this.listProduct)
+    this.listProduct = this.listProductService.getDummyProductList();
+    this.listProductNew = this.listProductService.getProductList();  
+    console.log(this.listProductNew)
   }
 }
