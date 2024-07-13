@@ -6,6 +6,7 @@ import { CategoryComponent } from './category/category.component';
 import { Children1Component } from './other/children-1/children-1.component';
 import { StoreComponent } from './store/store.component';
 import { DetailProductComponent } from './store/detail-product/detail-product.component';
+import { PostProductComponent } from './store/post-product/post-product.component';
 
 export const routes: Routes = [
 
@@ -22,5 +23,7 @@ export const routes: Routes = [
     },
     { path: 'category/:name',component: CategoryComponent },
     { path: 'store', component: StoreComponent },
-    { path: 'store/detail/:id', component: DetailProductComponent }
+    { path: 'store/detail/:id', component: DetailProductComponent },
+    { path: 'store/post/product', component: PostProductComponent },
+
 ];
