@@ -3,10 +3,16 @@
     <div class="form-group">
         <label>Title</label>
         <input type="text" class="form-control" formControlName="productTitle">
+        <small *ngIf="addProductForm.get('productTitle')?.invalid && addProductForm.get('productTitle')?.touched">
+            Title is required
+        </small>
     </div>
     <div class="form-group">
         <label>Email</label>
         <input type="email" class="form-control" formControlName="productEmail">
+        <small *ngIf="addProductForm.get('productEmail')?.invalid && addProductForm.get('productEmail')?.touched">
+            Email is not valid
+        </small>
     </div>
     
     <div class="form-group mt-3">
