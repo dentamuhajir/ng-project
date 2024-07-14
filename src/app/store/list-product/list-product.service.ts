@@ -1,17 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ListProduct, Product } from '../../../models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListProductService {
   productList: Array<any> = []
+
   endpointURL: string = "https://api.escuelajs.co/api/v1/products?offset=0&limit=8"
   constructor(private http: HttpClient) { }
 
-  getProductList(): Observable<any> {
-    return this.http.get<any>(`${this.endpointURL}`)
+  getProductList(): Observable<ListProduct[]> {
+    return this.http.get<ListProduct[]>(`${this.endpointURL}`)
   }
 
   getDummyProductList() {
