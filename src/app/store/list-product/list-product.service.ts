@@ -5,14 +5,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ListProductService implements OnInit {
+export class ListProductService {
   productList: Array<any> = []
   endpointURL: string = "https://api.escuelajs.co/api/v1/products?offset=0&limit=8"
   constructor(private http: HttpClient) { }
-  ngOnInit(): void {
-    this.getDummyProductList()
-    this.getProductList()
-  }
 
   getProductList(): Observable<any> {
     return this.http.get<any>(`${this.endpointURL}`)
