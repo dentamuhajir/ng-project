@@ -22,12 +22,13 @@ export class ListProductComponent implements OnInit {
 
     this.getAllProduct()
   
-    console.log(this.listProductNew)
+    //console.log(this.listProductNew)
   }
 
   getAllProduct() {
-    this.listProductService.getProductList().subscribe(
+    this.listProductService.getProductListMap().subscribe(
       (response) => {
+        //console.log(response)
         this.listProductNew = response
       },
       (error) => {
@@ -35,4 +36,5 @@ export class ListProductComponent implements OnInit {
       }
     );  
   }
+
 }

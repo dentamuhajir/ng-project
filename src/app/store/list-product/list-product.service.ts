@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ListProduct, Product } from '../../../models/product.model';
 
 @Injectable({
@@ -14,6 +14,21 @@ export class ListProductService {
 
   getProductList(): Observable<ListProduct[]> {
     return this.http.get<ListProduct[]>(`${this.endpointURL}`)
+  }
+  
+  getProductListMap(): Observable<ListProduct[]> {
+    return this.http.get<ListProduct[]>(this.endpointURL).pipe(
+      map((response: any[]) => {
+        return response.map(item => new ListProduct
+          (
+            item.id, 
+            item.title, 
+            item.price, 
+            item.description
+          )
+        );          
+      })
+    );
   }
 
   getDummyProductList() {

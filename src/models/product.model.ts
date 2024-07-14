@@ -8,8 +8,16 @@ export class Product {
 }
 
 export class ListProduct {
-    id!: number;
-    title!:  string;
-    description!: string;
-    price!: number;
+    idX: number;
+    titleX:  string;
+    priceX: number;
+    descriptionX: string;
+
+
+    constructor(id: number, title: string, price: number, description: string){
+        this.idX = id
+        this.titleX = title
+        this.descriptionX = description
+        this.priceX = price
+    }
 }

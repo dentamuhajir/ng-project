@@ -5,10 +5,10 @@
       <div class="col-3" *ngFor="let item of listProductNew">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">{{ item.title }}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">${{ item.price }}</h6>
-              <p class="card-text"> item.description </p>
-              <a routerLink="/store/detail/{{ item.id }}" class="card-link">Link to detail</a>
+              <h5 class="card-title">{{ item.titleX }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">${{ item.priceX }}</h6>
+              <p class="card-text"> {{ item.descriptionX | slice:0:60 }} ...</p>
+              <a routerLink="/store/detail/{{ item.idX }}" class="card-link">Link to detail</a>
             </div>
         </div>
       </div>
