@@ -10,15 +10,22 @@ import { DetailProductService } from './detail-product.service';
   styleUrl: './detail-product.component.css'
 })
 export class DetailProductComponent implements OnInit {
-  getID: number = 0
+  getID: any
   detailProduct: any 
   constructor(private route: ActivatedRoute,private detailProductService: DetailProductService) {
-    route.params.subscribe( (param: Params) => {
-      let id = param["id"]
-      this.getID = id
-    })
+    // route.params.subscribe( (param: Params) => {
+    //   let id = param["id"]
+    //   this.getID = id
+    // })
   }
+
+  getIdParam(): void {
+    this.getID = this.route.snapshot.paramMap.get('id');
+  }
+
   ngOnInit(): void {
+    this.getIdParam()
+    console.log(this.getID)
     this.detailProductService.getDetailProduct(this.getID).subscribe( response => {
       this.detailProduct = response
     })
