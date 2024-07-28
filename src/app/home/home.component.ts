@@ -16,6 +16,12 @@ export class HomeComponent {
     titleService.setTitle("Homepage");
   }
 
+  parentData: string = "belum kerubah"
+
+  updateData(newData: string) {
+    this.parentData = newData;
+  }
+
 
 
 }
